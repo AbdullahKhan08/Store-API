@@ -1,9 +1,9 @@
 require('dotenv').config()
-const PORT = process.env.PORT || 3000
-//async errors
+require('express-async-errors')
 
 const express = require('express')
 const app = express()
+const PORT = process.env.PORT || 3000
 
 const notFoundMiddleware = require('./middleware/not-found')
 const errorMiddleware = require('./middleware/error-handler')
